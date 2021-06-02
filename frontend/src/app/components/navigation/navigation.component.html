@@ -1,0 +1,65 @@
+<nav>
+    <h2 class="brand">
+      <a class="logo" routerLink="/" > <br>
+        La Poste Tunisienne
+
+        <br>
+
+      </a>
+    </h2>
+
+    <ul>
+      <li>
+        <a class="link"
+      routerLinkActive="active-link"
+      style="text-decoration: none;"
+      routerLink="/dashboard"
+      *ngIf="isAuthenticated"
+      >Dashboard
+      </a>
+         </li>
+
+      <li>
+        <a class="link"
+        routerLinkActive="active-link"
+        style="text-decoration: none;"
+        routerLink="/formations"
+        *ngIf="isAuthenticated"
+        >
+        Les stages</a>
+         </li>
+   
+      <li>
+        <a class="link"
+      *ngIf="!isAuthenticated"
+      routerLinkActive="active-link"
+      style="text-decoration: none;"
+      routerLink="/login"
+      > Login
+      </a>
+     </li>
+    
+
+      <li>
+        <a class="link"
+      *ngIf="isAuthenticated"
+      (click)="logout()"
+      routerLinkActive="active-link"
+      style="text-decoration: none;"
+      routerLink="/login"
+      >
+      Logout
+      </a> </li>
+    
+
+      <li>
+        <a class="link"
+        *ngIf="!isAuthenticated"
+        routerLinkActive="active-link"
+        style="text-decoration: none;"
+        routerLink="/signup"
+        > Sign Up
+          </a> </li>
+    
+      </ul>
+</nav>

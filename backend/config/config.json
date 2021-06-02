@@ -1,0 +1,6 @@
+{
+    "host":"localhost",
+    "user":"admin1",
+    "database":"stages",
+    "password": "admin"
+} 

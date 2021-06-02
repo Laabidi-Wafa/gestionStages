@@ -1,0 +1,21 @@
+<mat-card *ngFor="let evaluation of evaluations$ | async">
+  <button mat-icon-button>
+    <mat-icon (click)="delete(evaluation.id)" color="warn">delete</mat-icon>
+  </button>
+  <div class="formation-name">
+    <b style="color: lightcoral">Nom et prénom </b>
+    {{ evaluation.objectif }}
+  </div>
+  <div class="formation-place">
+    <b style="color: lightcoral">Niveau d'étude  </b>
+    {{ evaluation.note }}
+  </div>
+  <div class="date-of-starting">
+    <b style="color: lightcoral"> Capacités </b>
+    {{ evaluation.enligne }}
+  </div>
+  <div class="date-of-ending">
+    <b style="color: lightcoral"> Outils utilisés et experience</b>
+    {{ evaluation.fonctionnalite }}
+  </div>
+</mat-card>

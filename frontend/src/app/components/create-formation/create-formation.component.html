@@ -1,0 +1,49 @@
+<h1>Ajouter un nouveau stage</h1>
+<form
+  [formGroup]="formationForm"
+  #formDirective="ngForm"
+  (ngSubmit)="onSubmit(formationForm.value)"
+  novalidate
+>
+  <mat-form-field>
+    <mat-label>Intitulé du stage</mat-label>
+    <input
+      matInput
+      placeholder="Ex. Oracle"
+      formControlName="titre"
+      type="text"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Lieu du stage</mat-label>
+    <input
+      matInput
+      type="text"
+      placeholder="Ex. Tunis"
+      formControlName="lieu"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Date de début du stage</mat-label>
+    <input matInput type="datetime-local" formControlName="dateDeb" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Date de fin du stage</mat-label>
+    <input matInput type="datetime-local" formControlName="dateFin" />
+  </mat-form-field>
+
+  <div class="container">
+    <button
+      [disabled]="!formationForm.valid"
+      mat-raised-button
+      type="submit"
+      class="btn btn-5"
+    >
+      Ajouter un stage 
+    </button>
+  </div>
+  <br />
+</form>

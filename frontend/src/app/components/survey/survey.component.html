@@ -1,0 +1,92 @@
+<header>
+  <div class="text-box">
+    <h1 id="title">Demander un stage</h1>
+    <hr />
+    <p id="description">Veuillez remplir tous les champs</p>
+  </div>
+</header>
+<div class="container">
+  <form
+    id="survey-form"
+    [formGroup]="evaluationForm"
+    (ngSubmit)="onSubmit(evaluationForm.value)"
+    novalidate
+  >
+    <div class="labels">
+      <label for="dropdown"></label>
+    </div>
+    <div class="input-tab"></div>
+
+    <div class="labels">
+      <label>Nom et prénom </label>
+    </div>
+    <div class="input-tab">
+      <textarea
+        formControlName="objectif"
+        class="input-field"
+        id="objectif"
+        name="comments"
+        rows="1"
+        cols="2"
+        placeholder="Votre réponse..."
+      ></textarea>
+    </div>
+
+    <div class="labels">
+      <label for="dropdown"
+        >Niveau d'étude
+      </label>
+    </div>
+    <div class="input-tab">
+      <textarea
+        formControlName="note"
+        class="input-field"
+        id="note"
+        name="comments"
+        rows="1"
+        cols="2"
+        placeholder="Votre réponse..."
+      ></textarea>
+    </div>
+
+    <div class="labels">
+      <label>Capacités</label>
+    </div>
+    <div class="input-tab">
+      <textarea
+        formControlName="enligne"
+        class="input-field"
+        id="enligne"
+        name="comments"
+        rows="1"
+        cols="10"
+        placeholder="Votre réponse..."
+      ></textarea>
+    </div>
+
+    <div class="labels">
+      <label for="comments"
+        >Outils utilisés et experience</label
+      >
+    </div>
+    <div class="input-tab">
+      <textarea
+        formControlName="fonctionnalite"
+        class="input-field"
+        id="fonctionnalite"
+        name="comments"
+        rows="10"
+        cols="40"
+        placeholder="Vos commentaires..."
+      ></textarea>
+    </div>
+
+    <div class="btn">
+      <button id="submit" [disabled]="!evaluationForm.valid" type="submit">
+        Envoyer
+      </button>
+    </div>
+  </form>
+</div>
+
+<footer></footer>
